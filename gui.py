@@ -61,9 +61,8 @@ def main():
     global win
     win = ctk.ctk_tk.CTk()
     win.wm_title("Image Resizer")
-    win.geometry('360x400')
-    win.iconbitmap(None)
-    #win.resizable(False, False)
+    win.geometry('370x380')
+    win.resizable(False, False)
     
     
     saveFrame = ctk.CTkScrollableFrame(win, width=130)
@@ -84,23 +83,23 @@ def main():
     resizeButton = ctk.CTkButton(win, text="Resize!", command=lambda:resize(selectedFiles, saveDirectory, int(inputX.get()), int(inputY.get())))
     
     
-    chooseDirectoryButton.place(x=20, y=50)
+    chooseDirectoryButton.place(x=20, y=20)
     chooseDirectoryLabel.pack()
     
-    chooseSaveDirectoryButton.place(x=200, y=50)
+    chooseSaveDirectoryButton.place(x=205, y=20)
     
     chooseSaveDirectoryLabel.pack()
-    saveFrame.place(x=200, y=90)
-    imagesFrame.place(x=25, y=90)
+    saveFrame.place(x=200, y=60)
+    imagesFrame.place(x=25, y=60)
     
     inputLabelX.grid(row=0, column=0, padx=5)
     inputX.grid(row=0, column=1)
     
     inputLabelY.grid(row=0, column=2, padx=5)
     inputY.grid(row=0, column=3)
-    inputFrame.place(x=20, y=315)
+    inputFrame.place(x=20, y=285)
     
-    resizeButton.place(x=120, y=350)
+    resizeButton.place(x=120, y=330)
     
     win.mainloop()
     
